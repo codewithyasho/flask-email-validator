@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iValidate - Validate your Email now!</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body>
+
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/static/img/email.svg" alt="email svg">
+                <span>iValidate</span>
+            </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- main area -->
+    <main>
+        <div class="container">
+            <h1>Enter your email to validate</h1>
+            <form action="" method="post">
+                <!-- Input Filed to Validate Email Address -->
+                <input placeholder="Enter your email to validate" type="text" id="username" name="username" required>
+                <br><br>
+                <!-- Submit button -->
+                <input id="submitBtn" class="btn" type="submit" value="Submit">
+            </form>
+        </div>
+
+        <!-- ... (other HTML code) ... -->
+        <div class="container">
+            <h2>Your Results</h2>
+            <div id="resultCont">
+                {% if data %}
+
+                <p>Your email is {{ data.email }} and your domain is {{ data.domain }}</p>
+                <p>SMTP check {{ data.smtp_check }}.</p>
+                <p>Your email score: {{ data.score }}</p>
+                <p>Your email status: {{ data.state }}</p>
+                <p>mx found: {{ data.mx_found }}</p>
+                <p>Your email is free: {{ data.free }}</p>
+                <p>Disposable: {{ data.disposable }}</p>
+                <p>Format Valid: {{ data.format_valid }}</p>
+                <p>Reason: {{ data.reason }}</p>
+                <p>Role: {{ data.role }}</p>
+
+                {% else %}
+
+                <p>Your results will show here</p>
+                {% endif %}
+            </div>
+        </div>
+        <!-- ... (other HTML code) ... -->
+    </main>
+    <!-- footer -->
+    <footer>
+        Copyright | iValidate.com | All Rights reserved
+    </footer>
+
+</body>
+
+</html>
