@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValidateMail - Validate your Email</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="icon" type="image/png" href="static/img/favicon.png">
+
+
+    <!-- custom css -->
+    <style>
+        /* Add this CSS to your "error.html" file */
+
+        /* Body styles */
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #34495e;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo img {
+            height: 24px;
+            margin-right: 5px;
+        }
+
+        .logo span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Main content styles */
+        .main-content {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .hero-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .error-message {
+            font-size: 24px;
+            color: #e74c3c;
+            margin-bottom: 30px;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #34495e;
+            text-align: center;
+            padding: 20px 0;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        /* Menu toggle styles (JavaScript) */
+        .menu-toggle {
+            display: none;
+        }
+
+        .menu-toggle .bar {
+            width: 30px;
+            height: 3px;
+            background-color: #ffffff;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+
+        .menu-open .bar:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .menu-open .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-open .bar:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+
+    <!-- Nav bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/static/img/email.svg" alt="email svg">
+                <span>ValidateMail.net</span>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- JavaScript for menu toggle -->
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('menu-open');
+        });
+    </script>
+
+    <main class="main-content">
+        <section class="hero">
+            <h1 class="hero-title">Validate your Email</h1>
+        </section>
+
+        <h2>Oops! It seems you're not connected to the internet. Please check your internet connection and try again
+        </h2>
+
+        <!-- footer -->
+        <footer class="footer">
+            <p class="footer-text">Copyright &copy; ValidateMail.net | All Rights Reserved.</p>
+        </footer>
+</body>
+
+</html>

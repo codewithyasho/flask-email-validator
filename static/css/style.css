@@ -1,0 +1,322 @@
+/* Reset some default styles */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,700;1,300&family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply styles to header and navigation */
+header {
+  background-color: #34495e;
+  color: #ffffff;
+  padding: 10px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 23px;
+}
+
+.logo img {
+  height: 36px;
+  margin-right: 10px;
+  filter: invert();
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.nav-links a:hover {
+  color: #d8d8d8;
+}
+
+/* Apply styles to hero section */
+.hero {
+  background-color: #3498db;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.hero-title {
+  font-size: 36px;
+  color: #ffffff;
+}
+
+/* Apply styles to validation form section */
+.validation-form {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.email-input {
+  width: 80%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.btn {
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Apply styles to validation results section */
+.validation-results {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.results-title {
+  font-size: 24px;
+  color: #333333;
+}
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.validation-info {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.info-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.info-value {
+  color: #333333;
+}
+
+.no-results {
+  color: #333333;
+}
+
+/* Apply styles to footer */
+.footer {
+  background-color: #34495e;
+  text-align: center;
+  padding: 10px 0;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .validation-form {
+    padding: 20px 0;
+  }
+
+  .email-input {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* ... (previous CSS code) ... */
+
+/* Apply styles to the responsive navigation menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+/* Media Query for Responsiveness */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #34495e;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+/* Styles for the "X" icon when the menu is open */
+.menu-open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ... (previous CSS code) ... */
+
+/* Styles for attractive UI */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Apply styles to hero section */
+.hero {
+  background-color: #3498db;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.hero-title {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Apply styles to validation form section */
+.validation-form {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.email-input {
+  width: 80%;
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  margin-right: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.email-input::placeholder {
+  color: #555555;
+}
+
+.btn {
+  background-color: #e74c3c;
+  color: #ffffff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #c0392b;
+}
+
+/* Apply styles to validation results section */
+.validation-results {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.results-title {
+  font-size: 36px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.validation-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.info-label {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #333333;
+}
+
+.info-value {
+  color: #555555;
+}
+
+.no-results {
+  color: #555555;
+}
+
+
+/* Apply styles to main content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 87vh; /* Ensure the content stretches to at least the height of the viewport */
+}
+
+/* Apply styles to footer */
+.footer {
+  background-color: #34495e;
+  text-align: center;
+  padding: 20px 0;
+  color: #ffffff;
+  font-size: 14px;
+  margin-top: auto; /* Push the footer to the bottom */
+}

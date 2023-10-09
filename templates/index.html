@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Yashodeep Hundiwale" content="email validator">
+    <title>ValidateMail - Validate your Email</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="icon" type="image/png" href="static/img/favicon.png">
+</head>
+
+<body>
+
+
+    <!-- Nav bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/static/img/email.svg" alt="email svg">
+                <span>ValidateMail.net</span>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- JavaScript for menu toggle -->
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('menu-open');
+        });
+    </script>
+
+
+    <!-- main area -->
+    <main class="main-content">
+        <section class="hero">
+            <h1 class="hero-title">Validate your Email</h1>
+        </section>
+
+
+        <!-- input and submit button -->
+        <section class="validation-form">
+            <form action="/" method="post">
+                <input class="email-input" type="text" id="username" name="username"
+                    placeholder="Enter your email to validate" required>
+                <button class="btn" type="submit">Validate</button>
+            </form>
+        </section>
+
+
+        <!-- results section -->
+        <section class="validation-results">
+            <h2 class="results-title">Your Results:</h2>
+            <div class="results-container">
+
+                {% if data %}
+                <div class="validation-info">
+                    <p class="info-label">Email:</p>
+                    <p class="info-value">{{ data.email }}</p>
+                </div>
+
+                <div class="validation-info">
+                    <p class="info-label">Domain:</p>
+                    <p class="info-value">{{ data.domain }}</p>
+                </div>
+
+                <div class="validation-info">
+                    <p class="info-label">SMTP Check:</p>
+                    <p class="info-value">{{ data.smtp_check }}</p>
+                </div>
+
+                <div class="validation-info">
+                    <p class="info-label">MX found:</p>
+                    <p class="info-value">{{ data.mx_found }}</p>
+                </div>
+
+                <div class="validation-info">
+                    <p class="info-label">SCORE:</p>
+                    <p class="info-value">{{ data.score }}</p>
+                </div>
+
+                <div class="validation-info">
+                    <p class="info-label">FREE:</p>
+                    <p class="info-value">{{ data.free }}</p>
+                </div>
+
+                <!-- Add more validation info here -->
+                {% else %}
+
+                <p class="no-results">Your results will show here</p>
+
+                {% endif %}
+            </div>
+        </section>
+    </main>
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <p class="footer-text">Copyright &copy; ValidateMail.net | All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
