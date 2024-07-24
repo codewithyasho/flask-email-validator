@@ -1,2 +1,2 @@
-EMAIL_API_KEY = "YOUR_API_KEY"
+EMAIL_API_KEY = "cur_live_jm4wdmxh9mgGtycTWY9sp1XvwLV3YYMSObCQuQ3Z"
 
